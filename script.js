@@ -1,33 +1,71 @@
 
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-// Menu open and close
-menuBtn.addEventListener("click", function () {
+html {
+  scroll-behavior: smooth;
+}
 
-  navLinks.classList.toggle("show");
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+}
 
-  const isOpen = navLinks.classList.contains("show");
+header {
+  background: #163c35;
+  color: white;
+  padding: 18px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
 
-  menuBtn.innerHTML = isOpen ? "✕" : "☰";
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 8px;
+}
 
-  menuBtn.setAttribute("aria-expanded", isOpen);
+.hero {
+  text-align: center;
+  padding: 90px 20px;
+  background: linear-gradient(
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.55)
+  ),
+  url("https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1600&q=80")
+  center/cover;
 
-});
+  color: white;
+}
 
-// Close menu when a link is clicked
-const links = document.querySelectorAll(".nav-link");
+.hero h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
 
-links.forEach(function (link) {
+.hero p {
+  margin-bottom: 25px;
+}
 
-  link.addEventListener("click", function () {
+#search {
+  width: 90%;
+  max-width: 450px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
 
-    navLinks.classList.remove("show");
-
-    menuBtn.innerHTML = "☰";
-
-    menuBtn.setAttribute("aria-expanded", "false");
-
-  });
-
-});
+.btn {
+  display: inline-block;
+  background: #e87524;
+  color: white;
+  padding: 12px 20px;
+  border-
