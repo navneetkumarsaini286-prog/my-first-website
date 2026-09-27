@@ -1,49 +1,94 @@
-
 <!DOCTYPE html>
 <html lang="hi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>मेरी पहली वेबसाइट</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: #111827;
-      color: white;
-      padding: 30px;
-    }
-
-    .card {
-      background: #1f2937;
-      padding: 25px;
-      border-radius: 15px;
-      margin-top: 50px;
-    }
-
-    button {
-      background: #22c55e;
-      color: white;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 8px;
-      font-size: 18px;
-    }
-  </style>
+  <title>Explore Rajasthan - Tourist Guide</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div class="card">
-    <h1>मेरी पहली वेबसाइट</h1>
+<header>
+  <h2>Explore Rajasthan</h2>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#places">Places</a>
+    <a href="#map">Map</a>
+  </nav>
+</header>
 
-    <p>नमस्ते! यह मेरी खुद की वेबसाइट है।</p>
+<section class="hero" id="home">
+  <h1>Explore Beautiful Places</h1>
+  <p>Discover tourist places, maps and travel guides.</p>
 
-    <button onclick="alert('आपकी वेबसाइट काम कर रही है!')">
-      क्लिक करें
-    </button>
+  <input type="text" id="search"
+         placeholder="Search tourist place...">
+
+  <a class="btn" href="#places">Explore Places</a>
+</section>
+
+<section id="places">
+  <h2>Popular Tourist Places</h2>
+
+  <div class="places-container">
+
+    <div class="place-card">
+      <img src="https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?auto=format&fit=crop&w=800&q=80"
+           alt="Hawa Mahal Jaipur">
+
+      <h3>Hawa Mahal</h3>
+      <p>Jaipur, Rajasthan</p>
+      <p>Explore Jaipur's famous historic palace.</p>
+
+      <a class="btn"
+         href="https://www.google.com/maps/search/?api=1&query=Hawa+Mahal+Jaipur"
+         target="_blank" rel="noopener">
+        View Map
+      </a>
+    </div>
+
+    <div class="place-card">
+      <img src="https://images.unsplash.com/photo-1606293926075-69a00dbfde81?auto=format&fit=crop&w=800&q=80"
+           alt="Taj Mahal Agra">
+
+      <h3>Taj Mahal</h3>
+      <p>Agra, Uttar Pradesh</p>
+      <p>Visit the world-famous marble monument.</p>
+
+      <a class="btn"
+         href="https://www.google.com/maps/search/?api=1&query=Taj+Mahal+Agra"
+         target="_blank" rel="noopener">
+        View Map
+      </a>
+    </div>
+
+    <div class="place-card">
+      <img src="https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=800&q=80"
+           alt="Udaipur city">
+
+      <h3>City Palace</h3>
+      <p>Udaipur, Rajasthan</p>
+      <p>Discover the beautiful city of lakes.</p>
+
+      <a class="btn"
+         href="https://www.google.com/maps/search/?api=1&query=City+Palace+Udaipur"
+         target="_blank" rel="noopener">
+        View Map
+      </a>
+    </div>
+
   </div>
+</section>
 
-</body>
-</html>
+<section id="map">
+  <h2>Explore Places on Google Maps</h2>
+  <p>Find tourist places and get directions.</p>
+
+  <a class="btn"
+     href="https://www.google.com/maps/search/tourist+places+in+Rajasthan"
+     target="_blank" rel="noopener">
+    Open Google Maps
+  </a>
